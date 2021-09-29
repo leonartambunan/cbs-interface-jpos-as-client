@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<my-logon-mgr class="com.example.BankNetworkManagement"
+                        name="my-logon-manager"
+                        logger="Q2">
+    <property name="persistent-space" value="@my.logon.space@"/>
+    <property name="mux" value="my-mux"/>
+    <property name="channel-ready" value="my.ready"/>
+    <property name="timeout" value="30000"/>
+    <property name="echo-interval" value="30000"/>
+    <property name="logon-interval" value="60000"/>
+    <property name="channel_name" value="my"/>
+</my-logon-mgr>

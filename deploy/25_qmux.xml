@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<mux
+        class="org.jpos.q2.iso.QMUX"
+        name="my-mux"
+        logger="Q2">
+
+    <in>my-receive</in>
+    <out>my-send</out>
+    <ready>my.ready</ready>
+    <unhandled>my-unhandled</unhandled>
+
+    <request-listener class="com.example.ClientListener"
+                      logger="Q2"
+                      realm="my-realm-mux">
+        <property name="channel_name" value="my"/>
+        <property name="is_server" value="false"/>
+    </request-listener>
+
+</mux>

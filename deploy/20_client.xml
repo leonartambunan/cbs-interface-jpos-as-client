@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<channel-adaptor name="my"
+                 class="org.jpos.q2.iso.ChannelAdaptor"
+                 logger="Q2" >
+
+    <channel class="org.jpos.iso.channel.NACChannel"
+             packager="org.jpos.iso.packager.GenericPackager"
+             logger="Q2" >
+        <property name="host" value="192.168.0.178"/>
+        <property name="port" value="45094" />
+        <property name="packager-config" value="cfg/packager.xml" />
+    </channel>
+
+    <in>my-send</in>
+    <out>my-receive</out>
+
+    <reconnect-delay>10000</reconnect-delay>
+
+</channel-adaptor>
